@@ -1,0 +1,41 @@
+<form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)" style="padding: 10px 40px 0px 40px;">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      required
+      ngModel
+      name="title"
+    />
+  </div>
+  <div class="form-group">
+    <label for="body">body</label>
+    <textarea
+      class="form-control"
+      id="body"
+      required
+      ngModel
+      name="body"
+    ></textarea>
+  </div>
+  <button
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="!postForm.valid"
+  >
+    Send Post
+  </button>
+</form>
+
+
+
+<hr>
+<ul>
+  <li>
+    <div *ngFor="let item of posts">
+      {{ item.title }}
+    </div>
+  </li>
+</ul>
