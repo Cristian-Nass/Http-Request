@@ -8,6 +8,7 @@ import {  HttpClient } from '@angular/common/http';
 })
 export class PostComponent implements OnInit {
 
+  userLoggedIn = false;
   constructor() { }
 
   ngOnInit() {

@@ -9,11 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GetComponent } from './get/get.component';
+import { ChildComponent } from './post/child/child.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'get', component: GetComponent},
-  { path: 'post', component: PostComponent}
+  { path: 'post', component: PostComponent},
+  { path: 'post/child', component: ChildComponent}
   ];
 
 @NgModule({
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
     PostComponent,
     HomeComponent,
     NavbarComponent,
-    GetComponent
+    GetComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
